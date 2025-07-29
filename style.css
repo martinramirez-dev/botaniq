@@ -1,0 +1,376 @@
+* {
+    box-sizing: border-box;
+    color: #222;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    padding: 5px;
+    background-color: lightgreen;
+}
+
+/* Main Cont */
+.main-cont {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%; 
+    height: 95vh;
+
+    background-color: #fff;
+    border: 1px solid #222;
+    border-radius: 20px;
+    overflow: auto;
+}
+
+/* Hero Cont */
+.hero-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 115px 0 130px 0;
+}
+
+.hero-cont h1 {
+    text-align: center;
+    font-size: 14vh;
+    border-bottom: 1px solid lightgreen;
+    color: lightgreen;
+}
+
+.hero-cont .plant-1 {
+    width: 25%;
+}
+
+/* Banner */
+.banner {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.banner img { 
+    width: 100%;
+    height: 100vh;
+}
+
+.banner h1 {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 100px;
+    color: #fff;
+
+    margin: 0; padding: 0;
+
+    filter: drop-shadow(5px 5px 6px rgba(0, 0, 0, 0.3));
+}
+
+/* Products */
+.products {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.products h1, .products h1 i {
+    font-size: 10vh;
+    color: lightgreen;
+}
+
+/* Navbar */
+#open-menu {
+    position: fixed;
+    top: 30px; left: 38px;
+
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#open-menu i {
+    color: lightgreen;
+}
+
+#open-menu i:hover {
+    color: rgb(155, 255, 155);
+}
+
+.navbar {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    position: fixed;
+    left: 14px;
+
+    width: 25%;
+    height: 94.5vh;
+    gap: 20px;
+    padding: 20px;
+    font-size: 18px;
+    border-radius: 20px 0 0 20px;
+
+    border-right: 1px solid #222;
+    background-color: #fff;
+
+    z-index: 1;
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+.navbar .logo {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.navbar i, .navbar div {
+    color: lightgreen;
+}
+
+.navbar .close {
+    position: absolute;
+    top: 0; right: 0;
+    
+    font-size: 22px;
+    margin: 15px;
+
+    cursor: pointer;
+}
+
+.navbar .close i {
+    color: lightgreen;
+
+}
+
+.navbar .close i:hover {
+    color: rgb(155, 255, 155);
+}
+
+/* Products */
+/* Products Cards */
+.cards {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+    width: 100%;
+    padding: 20px;
+}
+
+.cards .card {
+    border-radius: 4px;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.card .card-img img {
+    width: 100%;
+}
+
+.card .card-cont {
+    text-align: center;
+}
+
+.card-cont button {
+    padding: 12px 0;
+    width: 30%;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+
+    transition: 0.5s;
+}
+
+.card-cont button:hover {
+    background-color: lightgreen;
+}
+
+/* Comments */
+.comments {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.comments h1 {
+    font-size: 10vh;
+    color: lightgreen;
+}
+
+.comment-cards {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+    width: 100%;
+    padding: 20px;
+}
+
+.comment-cards .comment-card {
+    border-radius: 4px;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.card-person {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-person img {
+    width: 40%;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.card-person {
+    text-align: center;
+}
+
+/* Contact Form */
+.contact {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact h1 {
+    font-size: 10vh;
+    color: lightgreen;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid lightgreen;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: black;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    color: lightgreen;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid lightgreen;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.contact-form .btn {
+    width: 100%;
+    padding: 12px;
+    background-color: lightgreen;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form .btn:hover {
+    background-color: rgb(155, 255, 155);
+}
+
+.form-message {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: lightgreen;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: lightgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    margin-top: 2rem;
+    padding: 40px;
+}
+
+footer h1 {
+    color: white;
+}
+
+/* Media */
+@media screen and (max-width: 1000px) {
+    .hero-cont {
+        flex-direction: column;
+    }
+
+    .hero-cont h1 {
+        border: none;
+        font-size: 10vh;
+    }
+
+    .cards {
+        grid-template-columns: auto auto;
+    }
+
+    .comment-cards {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .hero-cont .plant-1 {
+        width: 200px;
+    }
+
+    .navbar {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .hero-cont h1 {
+        font-size: 8vh;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .cards {
+        grid-template-columns: auto;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .navbar {
+        width: 92.3%;
+        border-radius: 20px;
+    }
+
+    .products h1 i {
+        display: none;
+    }
+}
