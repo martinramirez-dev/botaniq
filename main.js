@@ -2,9 +2,17 @@ const menu = document.getElementById("navbar");
 const contactForm = document.getElementById("contact-form");
 const formMessage = document.getElementById("form-message");
 
-function toggleMenu() {
-    menu.classList.toggle("active");
+function openMenu() {
+    menu.classList.add("active");
 }
+
+function closeMenu() {
+    menu.classList.remove("active");
+}
+
+document.querySelectorAll(".navbar a").forEach(link => {
+    link.addEventListener("click", closeMenu);
+});
 
 contactForm.addEventListener("submit", (e) => {
     e.preventDefault();

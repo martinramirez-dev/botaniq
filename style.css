@@ -1,13 +1,13 @@
 * {
     box-sizing: border-box;
     color: #222;
-
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body {
-    padding: 5px;
+
     background-color: lightgreen;
+    overflow-x: hidden;
 }
 
 /* Main Cont */
@@ -15,27 +15,27 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-
-    width: 100%; 
-    height: 95vh;
-
+    width: 100%;
+    height: 97vh;
+    overflow-y: scroll;
     background-color: #fff;
     border: 1px solid #222;
     border-radius: 20px;
-    overflow: auto;
 }
 
 /* Hero Cont */
 .hero-cont {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 115px 0 130px 0;
+    flex-direction: column;
+    padding-top: 50px;
 }
 
 .hero-cont h1 {
     text-align: center;
-    font-size: 14vh;
+    font-size: clamp(32px, 10vw, 80px);
     border-bottom: 1px solid lightgreen;
     color: lightgreen;
 }
@@ -51,21 +51,21 @@ body {
     position: relative;
 }
 
-.banner img { 
+.banner img {
     width: 100%;
     height: 100vh;
+    object-fit: cover;
 }
 
 .banner h1 {
     position: absolute;
-    top: 50%; left: 50%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
-
-    font-size: 100px;
+    font-size: clamp(40px, 10vw, 100px);
     color: #fff;
-
-    margin: 0; padding: 0;
-
+    margin: 0;
+    padding: 0;
     filter: drop-shadow(5px 5px 6px rgba(0, 0, 0, 0.3));
 }
 
@@ -77,19 +77,22 @@ body {
     flex-direction: column;
 }
 
-.products h1, .products h1 i {
-    font-size: 10vh;
+.products h1,
+.products h1 i {
+    font-size: clamp(28px, 8vw, 60px);
     color: lightgreen;
+    text-align: center;
+    padding: 10px;
 }
 
 /* Navbar */
 #open-menu {
     position: fixed;
-    top: 30px; left: 38px;
-
+    top: 30px;
+    left: 38px;
     font-size: 25px;
     cursor: pointer;
-    z-index: 1;
+    z-index: 10;
 }
 
 #open-menu i {
@@ -105,21 +108,21 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
     position: fixed;
     left: 14px;
-
     width: 25%;
-    height: 94.5vh;
+    height: 96.6vh;
     gap: 20px;
     padding: 20px;
     font-size: 18px;
     border-radius: 20px 0 0 20px;
-
     border-right: 1px solid #222;
     background-color: #fff;
+    z-index: 100;
+}
 
-    z-index: 1;
+.navbar.active {
+    display: flex;
 }
 
 .navbar a {
@@ -131,34 +134,32 @@ body {
     margin-bottom: 20px;
 }
 
-.navbar i, .navbar div {
+.navbar i,
+.navbar div {
     color: lightgreen;
 }
 
 .navbar .close {
     position: absolute;
-    top: 0; right: 0;
-    
+    top: 0;
+    right: 0;
     font-size: 22px;
     margin: 15px;
-
     cursor: pointer;
 }
 
 .navbar .close i {
     color: lightgreen;
-
 }
 
 .navbar .close i:hover {
     color: rgb(155, 255, 155);
 }
 
-/* Products */
 /* Products Cards */
 .cards {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 10px;
     width: 100%;
     padding: 20px;
@@ -172,10 +173,20 @@ body {
 
 .card .card-img img {
     width: 100%;
+    max-width: 100%;
+    height: auto;
 }
 
 .card .card-cont {
     text-align: center;
+}
+
+.card-cont h2 {
+    font-size: 1.5rem;
+}
+
+.card-cont p {
+    font-size: 1rem;
 }
 
 .card-cont button {
@@ -186,7 +197,6 @@ body {
     cursor: pointer;
     border: none;
     border-radius: 4px;
-
     transition: 0.5s;
 }
 
@@ -203,13 +213,15 @@ body {
 }
 
 .comments h1 {
-    font-size: 10vh;
+    font-size: clamp(28px, 8vw, 60px);
     color: lightgreen;
+    text-align: center;
+    padding: 10px;
 }
 
 .comment-cards {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 10px;
     width: 100%;
     padding: 20px;
@@ -225,16 +237,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
 }
 
 .card-person img {
-    width: 40%;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
     border-radius: 50%;
-    margin-right: 15px;
-}
-
-.card-person {
-    text-align: center;
 }
 
 /* Contact Form */
@@ -244,7 +256,7 @@ body {
 }
 
 .contact h1 {
-    font-size: 10vh;
+    font-size: clamp(28px, 8vw, 60px);
     color: lightgreen;
     margin-bottom: 20px;
 }
@@ -256,7 +268,7 @@ body {
     border: 1px solid lightgreen;
     border-radius: 8px;
     background-color: white;
-    box-shadow: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
@@ -313,7 +325,6 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
-
     margin-top: 2rem;
     padding: 40px;
 }
@@ -322,7 +333,7 @@ footer h1 {
     color: white;
 }
 
-/* Media */
+/* Media Queries */
 @media screen and (max-width: 1000px) {
     .hero-cont {
         flex-direction: column;
@@ -330,15 +341,6 @@ footer h1 {
 
     .hero-cont h1 {
         border: none;
-        font-size: 10vh;
-    }
-
-    .cards {
-        grid-template-columns: auto auto;
-    }
-
-    .comment-cards {
-        grid-template-columns: auto auto;
     }
 }
 
@@ -352,6 +354,14 @@ footer h1 {
     }
 }
 
+@media screen and (max-width: 600px) {
+
+
+    .navbar .logo {
+        font-size: 28px;
+    }
+}
+
 @media screen and (max-width: 550px) {
     .hero-cont h1 {
         font-size: 8vh;
@@ -359,15 +369,14 @@ footer h1 {
 }
 
 @media screen and (max-width: 500px) {
-    .cards {
-        grid-template-columns: auto;
+    .comment-card p {
+        font-size: 14px;
     }
 }
 
 @media screen and (max-width: 350px) {
     .navbar {
-        width: 92.3%;
-        border-radius: 20px;
+        border-radius: 0;
     }
 
     .products h1 i {
