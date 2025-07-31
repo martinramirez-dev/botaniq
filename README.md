@@ -25,9 +25,12 @@ Built with **HTML5** and **CSS3**, it features soft green tones and botanical ae
 
 ## 📷 Preview
 
+<img width="1278" height="599" alt="image" src="https://github.com/user-attachments/assets/4d2f8374-6a00-4db4-86ae-a89dc24576fc" />
+<img width="1277" height="597" alt="image" src="https://github.com/user-attachments/assets/726e7f5e-8659-4adb-a79b-680839163530" />
+<img width="1275" height="597" alt="image" src="https://github.com/user-attachments/assets/823b9590-e690-4f00-ad55-ea982c7390cd" />
 
 
-📬 Contact  
+## 📬 Contact  
 If you want to connect:
 
 📧 **Email:** devmartinramirez@gmail.com  
