@@ -89,7 +89,7 @@ body {
 #open-menu {
     position: fixed;
     top: 30px;
-    left: 35px;
+    left: 38px;
     font-size: 25px;
     cursor: pointer;
     z-index: 10;
@@ -109,7 +109,7 @@ body {
     justify-content: center;
     flex-direction: column;
     position: fixed;
-    left: 8px;
+    left: 9px;
     width: 25%;
     height: 96.6vh;
     gap: 20px;
